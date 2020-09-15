@@ -1,0 +1,127 @@
+1)
+package Assignment3;
+
+import java.util.Scanner;
+
+public class ExceptionHandling1 {
+
+	public static void main(String[] args) {
+
+		try {
+			Scanner sc = new Scanner(System.in);
+			System.out.println(("Enter the number of overs "));
+			int noOfOvers = sc.nextInt();
+
+			int runsArray[] = new int[noOfOvers];
+
+			for (int i = 0; i < noOfOvers; i++) {
+				System.out.println(("Enter the number of runs for each over "));
+				runsArray[i] = sc.nextInt();
+			}
+
+			System.out.println(("Enter the over number  "));
+			int overNo = sc.nextInt();
+			System.out.println(runsArray[overNo-1]);
+			
+		} catch (NegativeArraySizeException | ArrayIndexOutOfBoundsException e) {
+			System.out.println(e.getClass());
+		}
+
+	}
+
+}
+
+2)
+package Assignment3;
+import java.util.Scanner;
+
+public class ExceptionHandling2 {
+
+	
+
+		public static void main(String[] args) {
+
+			Scanner sc = new Scanner(System.in);
+			System.out.println(("Enter the player name "));
+			String playerName = sc.next();
+
+			System.out.println(("Enter the player age "));
+			int playerAge = sc.nextInt();
+			try {
+				if (playerAge > 39 || playerAge < 19) {
+					throw new CustomException("InvalidAgeRangeException");
+				} else {
+					System.out.println("Player name :" + playerName);
+					System.out.println("Player age :" + playerAge);
+				}
+			} catch (CustomException e) {
+				System.out.println(e);
+			}
+
+		}
+
+	}
+
+	class CustomException extends Exception {
+
+		CustomException(String message) {
+			super(message);
+		}
+	}
+
+
+3)
+package Assignment3;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ExceptionHandling3 {
+
+	public static void main(String[] args) {
+
+		String teamNames[] = new String[8];
+		teamNames[0] = "Chennai Super Kings";
+		teamNames[1] = "Deccan Chargers";
+		teamNames[2] = "Delhi Daredevils";
+		teamNames[3] = "Kings XI Punjab";
+		teamNames[4] = "Kolkata Knight Riders";
+		teamNames[5] = "Mumbai Indians";
+		teamNames[6] = "Rajasthan Royals";
+		teamNames[7] = "Royal Challengers Bangalore";
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println(("Enter the expected winner team of IPL Season 4 "));
+		String winnerTeam = sc.next();
+		try {
+			if (!Arrays.asList(teamNames).contains(winnerTeam)) {
+				throw new TeamNameNotFoundException("Entered team is not a part of IPL season 4");
+			}
+
+			System.out.println("Expected winner team of IPL Season 4 ");
+			System.out.println(winnerTeam);
+
+			System.out.println(("Enter the expected runner team of IPL Season 4 "));
+			String runnerTeam = sc.next();
+
+			if (!Arrays.asList(teamNames).contains(winnerTeam)) {
+				throw new TeamNameNotFoundException("Entered team is not a part of IPL season 4");
+			}
+			System.out.println("Expected runner team of IPL Season 4 ");
+			System.out.println(runnerTeam);
+
+		} catch (TeamNameNotFoundException e) {
+			System.out.println(e);
+		}
+
+	}
+
+}
+
+class TeamNameNotFoundException extends Exception {
+
+	TeamNameNotFoundException(String message) {
+		super(message);
+
+	}
+}
