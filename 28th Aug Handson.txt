@@ -1,0 +1,32 @@
+1) G. 4 3
+2) F. hi hi, followed by an exception
+3) C. Compilation fails
+4) A. true true
+5) D. 343  341  340
+6) I. Compilation fails.
+7) D. “X extends Y” is correct for all combinations of X and Y being classes and/or interfaces.
+8) E.    Compilation fails.
+9) E.    Compilation fails.
+10) A.    Programmer debug() { return this; }
+    B.    SCJP debug()  { return this; }
+    E.    int debug(int x) { return 1; }
+    F.Object debug(int x) { return this; }
+11) A. Clidlet
+12) d) abstract class Class2 implements Base {}
+    e)  abstract class Class2 implements Base {
+    f) public boolean m1 () { return (true); }  }
+13) b)  public abstract class Canine { public Bark speak() { } }
+14) b)  public abstract class Frob implements Frobnicate { }
+15) B.    HAS-A relationships always rely on instance variables
+16) A.    Flower getType() ) { return this; }
+    C.    Plant getType() ) { return this; }
+    D.   Tulip getType() ) { return new Tulip() ); }
+17) D.    Woop HAS-A Hmpf and Woop IS-A Zing
+18) A.    MyOuter.MyInner m = new MyOuter.MyInner() );
+19) A.    57  22
+20) a)       Line 6 is executed exactly 0 times
+    f)        The finally block is executed exactly 2 times.
+    h)      Each invocation produces a different exception.
+21) c)  NumberFormatException
+22) e)  –ic    mc   mf    of
+23) 
