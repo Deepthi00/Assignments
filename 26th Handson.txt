@@ -1,0 +1,117 @@
+1)
+package Assignment3;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+import java.text.ParseException;
+public class Validate{
+   public static boolean validateJavaDate(String strDate)
+   {
+	
+	if (strDate.trim().equals(""))
+	{
+	    return true;
+	}
+	
+	else
+	{
+	    
+	    SimpleDateFormat sdfrmt = new SimpleDateFormat("MM/dd/yyyy");
+	    
+	  
+	    try
+	    {
+	        Date javaDate = sdfrmt.parse(strDate); 
+	        System.out.println("Invalid");
+	    }
+	    catch (ParseException e)
+	    {
+	        System.out.println("Valid");
+	        return true;
+	        
+	    }
+	    
+	    return false;
+	}
+   }
+   public static void main(String args[]){
+	   
+	   Scanner scanner = new Scanner(System.in);
+	   String date1 = scanner.next();
+	   SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
+	   
+	   System.out.println(validateJavaDate(date1));
+	
+   }
+}
+
+4)
+package Assignment3;
+
+import java.util.Scanner;
+
+public class input{
+
+    public static void main(String args[])
+
+     {
+
+       Scanner s = new Scanner(System.in);
+
+
+       System.out.println("1. Rectangle");
+
+       System.out.println("2. Square");
+
+       System.out.println("3. Circle");
+       System.out.println("Area Calculator --- Choose your shape");
+
+       int op=s.nextInt();
+
+       switch(op)
+
+       {
+       case 1: System.out.println("Enter length and breadth:");
+
+       float l=s.nextFloat();
+
+       float b=s.nextFloat();
+
+       float art= l*b;
+
+       System.out.println("Area of Rectangle:"+art);
+
+       break;
+
+       
+       case 2: System.out.println("Enter side:");
+
+       int x=s.nextInt();
+
+       int as=x*x;
+
+       System.out.println("Area:"+as);
+
+       break;
+
+         case 3: System.out.println("Enter radius:");
+
+                   float r=s.nextFloat();
+
+                   float ac=3.14f*r*r;
+
+                   System.out.println("Area of Circle:"+ac);
+
+                   break;
+
+        
+
+        
+         default: System.out.println("Wrong choice");
+
+        }
+
+   }
+
+}
