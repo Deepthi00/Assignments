@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+ul {
+  list-style-image: url('sqpurple.gif');
+}
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>MOVIE DASHBOARD</h1>
+</div>
+<p>BookMyShow app brings booking tickets for movies, concerts, live event streaming, and activities near you to your fingertips.
+With a presence in over 650 Indian cities and international presence in Indonesia, Singapore, UAE, Sri Lanka, and West Indies, BookMyShow is one of the biggest entertainment destinations.
+BookMyShow works along with partners across the industry to provide unmatched entertainment experiences to millions of customers.
+
+The Following Information are disolayed for the Movies
+
+</p>
+
+<ul class="a">
+  <li>Movie Name</li>
+  <li>Movie Artist</li>
+  <li>Movie Release Year</li>
+  <li>IMDB Link</li>
+</ul>
+<h2></h2>
+
+<table>
+  <tr>
+    <th>Movie Name</th>
+    <th>Movie Artist</th>
+    <th>Movie Release Year</th>
+    <th>IMDB Link</th>
+   
+  </tr>
+  <tr>
+    <td>Pursuit of Happyness</td>
+    <td>Will Smith</td>
+    <td>2006</td>
+    <td><a href="Imdb_Link">Imdb_Link</a></td>
+  </tr>
+  <tr>
+    <td>Slumdog Millionaire</td>
+    <td>Dev Patel, Anil Kapoor</td>
+    <td>2008</td>
+    <td><a href="Imdb_Link">Imdb_Link</a></td>
+    
+  </tr>
+  <tr>
+    <td>Vaffage Point</td>
+    <td>Densis Quiad, Manew Fox</td>
+    <td>2008</td>
+    <td><a href="Imdb_Link">Imdb_Link</a></td>
+  </tr>
+  <tr>
+    <td>Argo</td>
+    <td>Bee Affeck, Bryan Cranston</td>
+    <td>2012</td>
+    <td><a href="Imdb_Link">Imdb_Link</a></td>
+  </tr>
+</table>
+<p> The above table represents Movie Details</p>
+</body>
+</html>
